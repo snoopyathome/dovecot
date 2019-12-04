@@ -2,7 +2,7 @@ FROM alpine:3.10
 
 COPY files/start.sh /start.sh
 
-RUN apk add --update ca-certificates dovecot rsyslog &&\
+RUN apk add --update ca-certificates dovecot dovecot-lmtpd rsyslog &&\
     chmod +x /start.sh &&\
     rm -rf /var/cache/apk/*
 
